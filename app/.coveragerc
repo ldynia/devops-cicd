@@ -1,0 +1,16 @@
+[run]
+    source = .
+    branch = True
+    omit = manage.py
+        *migrations*
+        *__init.py__*
+        *asgi.py
+        *wsgi.py
+        *apps.py
+        *middleware.py
+[report]
+    fail_under = 92.5
+    show_missing = True
+    skip_covered = True
+    sort = Cover
+    precision = 1
