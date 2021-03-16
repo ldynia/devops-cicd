@@ -26,9 +26,17 @@ steps:
     displayName: Docker Login & Push
     inputs:
       script: |
+<<<<<<< HEAD
         echo "${YELLOW}DockerHub Login${NC}"
         docker login -p -u
 
         echo "${YELLOW}DockerHub Push${NC}"
         docker push $(DOCKER_HUB_USERNAME)/$(imageName):$(imageTag)
+=======
+        printf "${YELLOW}DockerHub Login${NC}\n"
+        docker login -p $(DOCKER_HUB_PASSWORD) -u $(DOCKER_HUB_USERNAME)
+
+        printf "${YELLOW}DockerHub Push${NC}\n"
+        docker push $(imageArtifact)
+>>>>>>> pipeline
 

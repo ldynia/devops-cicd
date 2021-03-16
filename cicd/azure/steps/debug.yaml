@@ -3,9 +3,6 @@ steps:
     displayName: Debug
     inputs:
       script: |
-        YELLOW='\033[0;33m'
-        NC='\033[0m'
-
         printf "${YELLOW}Current working directory${NC}\n"
         pwd
 

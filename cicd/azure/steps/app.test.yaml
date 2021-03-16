@@ -1,12 +1,4 @@
 steps:
-  - task: CmdLine@2
-    displayName: "App: Run Tests"
-    inputs:
-      script: |
-        docker run -d --rm --name app $(imageArtifact)
-        sleep 10s
-        docker exec app ./test.sh
-
   - task: DownloadPipelineArtifact@2
     displayName: Download App Artifact
     inputs:
@@ -25,8 +17,9 @@ steps:
       command: run
       arguments: --rm --detach --name app $(imageArtifact)
 
-  - task: Docker@2
-    displayName: Test App (Unit Test)
+  - task: CmdLine@2
+    displayName: Run App Tests
     inputs:
-      command: exec
-      arguments: app ./test.sh
+      script: |
+        sleep 5s
+        docker exec app /app/scripts/test.sh
