@@ -2,6 +2,7 @@
 TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project.
 
 Demo project to test various CI/CD tools.
+Demo project to test various CI/CD tools.
 
 
 # Testing
