@@ -1,4 +1,4 @@
-tirgger:
+trigger:
   - master
 variables:
   NC: '\033[0m'
